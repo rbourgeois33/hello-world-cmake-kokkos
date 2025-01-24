@@ -6,5 +6,12 @@ get kokkos:
 git submodule update --init --recursive
 
 in build:
-cmake -DKokkos_ENABLE_CUDA=ON -DKokkos_ARCH_AMPERE86=ON ..
+```bash
+cmake -DKokkos_ENABLE_CUDA=ON -DKokkos_ARCH_AMPERE86=ON -DCMAKE_BUILD_TYPE=Release..
+```
 (for A5000)
+
+for ada:
+```bash
+cmake -DKokkos_ENABLE_CUDA=ON -DKokkos_ARCH_ADA89=ON -DCMAKE_BUILD_TYPE=Release ..
+```
